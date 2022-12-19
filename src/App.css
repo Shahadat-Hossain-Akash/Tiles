@@ -1,38 +1,44 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html, body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Michroma', sans-serif;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgb(10, 10, 10);
+  color: rgb(255, 0, 106);
+  font-size: .4in;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.grid{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 10px;
 }
-
-.App-link {
-  color: #61dafb;
+.row{
+  display: flex;
+  gap: 10px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card{
+  width: 50px;
+  height: 60px;
+  padding: 50px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 20%;
+  text-align: center;
+  transition: opacity .2s ease-in-out;
+  border: 3px solid #080808;
+  box-shadow: 5px 5px 0 0 #ff0c0c;
+}
+.card:hover{
+  opacity: 0.8;
+}
+.card.revealed{
+  cursor: default;
+  pointer-events: disabled;
 }
